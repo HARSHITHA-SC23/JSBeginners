@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="todoHeader">
+        <h1>JSBeginners ToDo List</h1>
+    </header>
+    <div class="content">
+        <div class="contentButton">
+            <button id="open">Add Task</button>
+            <button id="delete">Delete All Task</button>
+        </div>
+        <div id="modal" class="modalBox">
+            <div class="modalContent">
+                <h1 style="color: #242582;">Create Task</h1>
+                <form id="taskForm" action="ToDo.html" onsubmit="taskForm(event)">
+                    <div id="taskSubDiv">
+                        <label id="formLabel">Task Name: </label>
+                        <input type="text" id="taskName" name="name" /> <br />
+                    </div>
+                    <div id="taskSubDiv">
+                        <label id="formLabel">Task Priority: </label>
+                        <div>
+                            <input type="radio" id="high" name="priority" value="high" />
+                            <label for="priority1">HIGH</label>
+                            <input type="radio" id="medium" name="priority" value="medium" />
+                            <label for="priority3">MEDIUM</label>
+                            <input type="radio" id="low" name="priority" value="low" />
+                            <label for="priority2">LOW</label>
+                        </div>
+                    </div>
+                    <div id="taskSubDiv">
+                        <label id="formLabel">Task Due: </label>
+                        <input type="date" id="taskDue" name="due" /> <br />
+                    </div>
+                    <input id="submit" type="submit" value="Submit" />
+                </form>
+                <button id="close">Close</button>
+            </div>
+        </div>
+        <div class="listTable">
+            <table>
+                <thead class="tableHeader">
+                    <tr>
+                        <th scope="col">Task Name</th>
+                        <th scope="col">Task Priority</th>
+                        <th scope="col">Task Due</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <footer>
+        <h6>Copyright @Harshitha SC 2024</h6>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
