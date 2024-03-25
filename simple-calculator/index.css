@@ -1,0 +1,78 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.main {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    background-color: rgb(60, 59, 59);
+    border-radius: 15px;
+}
+
+.sub-main {
+    padding: 1em 1em 1em 1em;
+}
+
+.input-field {
+    display: flex;
+    gap: 0.5em;
+    height: 4em;
+    width: 98%;
+}
+
+.input-field input {
+    width: 98%;
+    border: none;
+    border-radius: 15px;
+    background-color: #a3c3a6;
+    font-size: large;
+    padding: 1em;
+}
+
+.container-class {
+    margin-top: 1em;
+    display: grid;
+    gap: 0.5em;
+}
+
+.itemContainer {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em 0 0.2em 0;
+}
+
+.itemContainer button,
+.input-field button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(27, 27, 27, 0.885);
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    border-radius: 10px;
+    color: #fff;
+    font-size: xx-large;
+    border: none;
+}
+
+.input-field button {
+    width: 30%;
+    height: 70%;
+    margin: 2.5% 2.5% 2% 2.5%;
+    font-size: medium;
+}
+
+.itemContainer button:nth-child(4) {
+    background-color: rgba(146, 146, 146, 0.885);
+}
+
+.itemContainer button:hover,
+.input-field button:hover {
+    background-color: #a3c3a6;
+    cursor: pointer;
+}
