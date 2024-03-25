@@ -16,17 +16,21 @@ for (let i = 0; i < numDivs; i++) {
         const b = document.createElement('button');
         b.textContent = item;
         b.addEventListener('click', function (e) {
-            if (e.target.textContent !== '=') {
-                calcArray.push(e.target.textContent);
-                calc.value = calcArray.join('')
-            } else {
-                handleCalculation(calcArray.join(''));
-            }
+            performOperation(e)
         })
         return b;
     })
     div.append(...bElements)
     container.appendChild(div);
+}
+
+function performOperation(e) {
+    if (e.target.textContent !== '=') {
+        calcArray.push(e.target.textContent);
+        calc.value = calcArray.join('')
+    } else {
+        handleCalculation(calcArray.join(''));
+    }
 }
 
 function handleCalculation(calc) {
