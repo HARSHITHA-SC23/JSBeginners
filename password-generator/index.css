@@ -1,0 +1,90 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #181818;
+
+}
+
+.main {
+    display: grid;
+    position: relative;
+    justify-items: center;
+    align-content: start;
+    background-color: #121118;
+    color: #fff;
+    width: 65vw;
+    height: 80vh;
+    margin: auto;
+    top: 3em;
+}
+
+.sub-content {
+    display: grid;
+    gap: 3em;
+    align-content: start;
+    height: 55vh;
+    width: 55vw;
+    max-height: 60vh;
+}
+
+.sub-content #password-field {
+    background-color: #24232B;
+    border-radius: 15px;
+    border: none;
+    height: 10vh;
+    width: 98%;
+}
+
+.sub-content #requirement {
+    display: grid;
+    border-radius: 15px;
+    align-content: space-evenly;
+    background-color: #24232B;
+    height: 45vh;
+    padding: 5% 0 0 5%;
+}
+
+.slider,
+.checkbox {
+    accent-color: #A4FFAF;
+    width: 90%;
+}
+
+.checkbox {
+    display: grid;
+}
+
+#requirement button {
+    background-color: #A4FFAF;
+    width: 90%;
+    height: 3em;
+    border-radius: 15px;
+}
+
+#copy {
+    position: relative;
+    background-color: #A4FFAF;
+    border-radius: 15px;
+    top: 1em;
+    height: 3em;
+    width: 5em;
+}
+
+#password-field {
+    color: #fff;
+    font-size: large;
+    text-align: center;
+}
+
+#strength-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2% 0 2%;
+    background-color: #18171F;
+    width: 90%;
+    height: 3em;
+    border-radius: 15px;
+}

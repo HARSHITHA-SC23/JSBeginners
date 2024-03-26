@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <h4>Password Generator</h4>
+        <div class="sub-content">
+            <div style="display: flex; gap: 2%;">
+                <input id="password-field" type="text" disabled />
+                <button id="copy">copy</button>
+            </div>
+            <div id="requirement">
+                <div>
+                    <span>Character Length:</span>
+                    <span id="count"></span>
+                    <div>
+                        <input type="range" min="5" max="30" value="5" class="slider" id="myRange">
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <div>
+                        <input type="checkbox" id="upper" name="requirement1" value="upper">
+                        <label>Include UpperCase</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="lower" name="requirement2" value="lower">
+                        <label>Include Lowercase</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="number" name="requirement3" value="number">
+                        <label>Include Numbers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="symbol" name="requirement4" value="symbol">
+                        <label>Include Symbols</label>
+                    </div>
+                </div>
+                <div id="strength-container">
+                    <label>Strength</label>
+                    <label id="strength"></label>
+                </div>
+                <button id="generatepassword">Generate Password</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
