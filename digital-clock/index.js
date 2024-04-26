@@ -34,18 +34,11 @@ function getCurrentTime() {
         'date': d.getDate()
     }
     let zone = currentTime.hours >= 12 ? 'PM' : 'AM'
-    if (currentTime.hours < 10) {
-        currentTime.hours = `0${currentTime.hours}`
-    }
-    if (currentTime.hours > 12) {
-        currentTime.hours = `0${currentTime.hours - 12}`
-    }
-    if (currentTime.minutes < 10) {
-        currentTime.minutes = `0${currentTime.minutes}`
-    }
-    if (currentTime.seconds < 10) {
-        currentTime.seconds = `0${currentTime.seconds}`
-    }
+    currentTime.hours = currentTime.hours % 12 || 12; // Convert hours to 12-hour format
+    currentTime.hours = currentTime.hours < 10 ? `0${currentTime.hours}` : currentTime.hours;
+    currentTime.minutes = currentTime.minutes < 10 ? `0${currentTime.minutes}` : currentTime.minutes;
+    currentTime.seconds = currentTime.seconds < 10 ? `0${currentTime.seconds}` : currentTime.seconds;
+
     hour.textContent = `${currentTime.hours} : ${currentTime.minutes}`
     ampm.textContent = zone
     seconds.textContent = currentTime.seconds
@@ -53,6 +46,4 @@ function getCurrentTime() {
 }
 
 getCurrentTime()
-setInterval(() => {
-    getCurrentTime()
-}, 1000)
+setInterval(getCurrentTime, 1000);
