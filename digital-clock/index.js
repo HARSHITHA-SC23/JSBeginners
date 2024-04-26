@@ -51,6 +51,8 @@ function getCurrentTime() {
     seconds.textContent = currentTime.seconds
     date.textContent = `${monthsOfYear[currentDate.month]}, ${daysOfWeek[currentDate.day]} ${currentDate.date}`
 }
+
+getCurrentTime()
 setInterval(() => {
     getCurrentTime()
 }, 1000)
