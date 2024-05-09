@@ -1,0 +1,105 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #432C87;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 1%;
+}
+
+.timer-circle-main {
+    width: 35vh;
+    height: 35vh;
+    border: 8px solid #261466;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 28px;
+    height: 28px;
+    background: #261466;
+    border-radius: 50%;
+    border: 3px dashed #9ceaf7;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle 60s linear infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg) translate(-17.7vh) rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-17.7vh) rotate(-360deg);
+    }
+}
+
+
+#title,
+#timer {
+    color: #fff;
+    text-align: center;
+}
+
+#timer-circle {
+    width: 40vh;
+    height: 40vh;
+    border: 10px solid #261466;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer-circle-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2em;
+    /* gap: 5em; */
+}
+
+.timer-button {
+    background-color: transparent;
+    color: #9ceaf7;
+    border: none;
+    cursor: pointer;
+    font-size: 2.5em;
+}
+
+.timer-button:disabled {
+    color: #9ce9f7a9 !important;
+    cursor: default;
+}
+
+.timer-button[data-tooltip]:hover:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #432C87;
+    color: #ffffff;
+    width: max-content;
+    border: 1px dashed #9ce9f7a9;
+    border-radius: 10px;
+    padding: 1.5%;
+    font-size: 12px;
+}
